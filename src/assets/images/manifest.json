@@ -1,0 +1,54 @@
+{
+  "projects/lampara-cintas/planos/plano_N1_ensamblaje": {
+    "w": 1819,
+    "h": 1287
+  },
+  "projects/lampara-cintas/planos/plano_N2_explosionada": {
+    "w": 1819,
+    "h": 1287
+  },
+  "projects/lampara-cintas/planos/plano_N4_aro_perforado_inf": {
+    "w": 1819,
+    "h": 1287
+  },
+  "projects/lampara-cintas/render": {
+    "w": 519,
+    "h": 516
+  },
+  "projects/lampara-texturada/foto_luz_calida": {
+    "w": 960,
+    "h": 1280
+  },
+  "projects/lampara-texturada/foto_luz_celeste": {
+    "w": 960,
+    "h": 1280
+  },
+  "projects/lampara-texturada/foto_luz_fria": {
+    "w": 960,
+    "h": 1280
+  },
+  "projects/lampara-texturada/tira_colores": {
+    "w": 1150,
+    "h": 940
+  },
+  "projects/reposera/REPOSERAS.26": {
+    "w": 2000,
+    "h": 1486
+  },
+  "projects/reposera/REPOSERAS.27": {
+    "w": 1800,
+    "h": 2249
+  },
+  "projects/reposera/REPOSERAS.28": {
+    "w": 1800,
+    "h": 2249
+  },
+  "projects/reposera/REPOSERAS.29": {
+    "w": 2000,
+    "h": 1741
+  },
+  "projects/reposera/contexto-pileta": {
+    "w": 1537,
+    "h": 861
+  }
+}

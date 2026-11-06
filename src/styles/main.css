@@ -1,0 +1,182 @@
+@import 'tailwindcss';
+
+/*
+ * Sistema visual — "Archivo de objetos"
+ * Archivo (grotesca de catálogo, eje de ancho) para títulos y UI,
+ * Newsreader para lectura, Martian Mono para anotaciones técnicas.
+ */
+@theme {
+  --color-ivory: #f4f1ea;
+  --color-charcoal: #252522;
+  --color-wood: #b58a61;
+  --color-stone: #d8d4cb;
+  --color-wood-deep: #8a6542;
+  --color-night: #1a1a18;
+
+  --font-display: 'Archivo', 'Arial Narrow', system-ui, sans-serif;
+  --font-serif: 'Newsreader', Georgia, serif;
+  --font-mono: 'Martian Mono', ui-monospace, monospace;
+  --font-sans: 'Archivo', system-ui, sans-serif;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-quart: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+:root {
+  --gutter: clamp(1.25rem, 3.4vw, 3.25rem);
+  --nav-h: 4rem;
+  --col: calc((100vw - 2 * var(--gutter)) / 12);
+}
+
+html {
+  background: var(--color-ivory);
+  color: var(--color-charcoal);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+
+::selection {
+  background: var(--color-wood);
+  color: var(--color-ivory);
+}
+
+a,
+button {
+  color: inherit;
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 1px solid currentColor;
+  outline-offset: 4px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ───────── Tipografía ───────── */
+
+/* Títulos de catálogo: condensados, en mayúscula, livianos */
+.t-display {
+  font-family: var(--font-display);
+  font-stretch: 66%;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 0.84;
+  letter-spacing: -0.012em;
+}
+
+/* Títulos de sección y de proyecto en caja baja */
+.t-head {
+  font-family: var(--font-display);
+  font-stretch: 78%;
+  font-weight: 400;
+  line-height: 0.96;
+  letter-spacing: -0.022em;
+  word-spacing: 0.06em;
+}
+
+/* Frases protagonistas */
+.t-lead {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  line-height: 1.16;
+  letter-spacing: -0.01em;
+  font-size: clamp(1.55rem, 2.65vw, 2.55rem);
+}
+
+.t-body {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  max-width: 36rem;
+  text-wrap: pretty;
+}
+
+/* Anotación técnica */
+.t-meta {
+  font-family: var(--font-mono);
+  font-stretch: 87.5%;
+  font-size: 0.64rem;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+/* Etiquetas de interfaz */
+.t-ui {
+  font-family: var(--font-display);
+  font-stretch: 90%;
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+}
+
+.t-num {
+  font-family: var(--font-display);
+  font-stretch: 62%;
+  font-weight: 200;
+  line-height: 0.8;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ───────── Estructura ───────── */
+.wrap {
+  padding-inline: var(--gutter);
+  margin-inline: auto;
+  max-width: 1840px;
+}
+
+.grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: clamp(0.75rem, 1.5vw, 1.5rem);
+}
+
+.rule {
+  border-top: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+}
+.rule-b {
+  border-bottom: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+}
+
+.muted {
+  color: color-mix(in srgb, currentColor 62%, transparent);
+}
+
+.mask {
+  display: block;
+  overflow: clip;
+}
+
+/* Link de texto con subrayado fino */
+.text-link {
+  background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1px no-repeat;
+  padding-bottom: 0.1em;
+  transition: background-size 0.5s var(--ease-out-expo);
+}
+.text-link:hover {
+  background-size: 0% 1px;
+  background-position: 100% 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

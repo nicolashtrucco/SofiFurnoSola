@@ -1,0 +1,31 @@
+{
+  "name": "sofiafunrosola",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "optimize:model": "npx -y @gltf-transform/cli optimize src/assets/models/thonet-14.glb public/models/thonet-14.glb --compress meshopt --texture-compress webp --texture-size 2048 && npx -y @gltf-transform/cli optimize src/assets/models/thonet-14.glb public/models/thonet-14-mobile.glb --compress meshopt --texture-compress webp --texture-size 1024",
+    "optimize:images": "node scripts/optimize-images.mjs"
+  },
+  "dependencies": {
+    "gsap": "^3.15.1",
+    "motion-v": "^2.11.1",
+    "three": "^0.187.0",
+    "vue": "^3.5.44"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.4",
+    "@types/node": "^24.19.2",
+    "@types/three": "^0.187.0",
+    "@vitejs/plugin-vue": "^6.0.10",
+    "@vue/tsconfig": "^0.9.1",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.4",
+    "typescript": "~6.0.3",
+    "vite": "^8.3.6",
+    "vue-tsc": "^3.3.14"
+  }
+}
