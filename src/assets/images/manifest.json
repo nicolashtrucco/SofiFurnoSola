@@ -1,15 +1,43 @@
 {
+  "projects/lampara-cintas/planos/plano_N10_pieza_fijacion_B": {
+    "w": 2400,
+    "h": 1698
+  },
   "projects/lampara-cintas/planos/plano_N1_ensamblaje": {
-    "w": 1819,
-    "h": 1287
+    "w": 2400,
+    "h": 1698
   },
   "projects/lampara-cintas/planos/plano_N2_explosionada": {
-    "w": 1819,
-    "h": 1287
+    "w": 2400,
+    "h": 1698
+  },
+  "projects/lampara-cintas/planos/plano_N3_base": {
+    "w": 2400,
+    "h": 1698
   },
   "projects/lampara-cintas/planos/plano_N4_aro_perforado_inf": {
-    "w": 1819,
-    "h": 1287
+    "w": 2400,
+    "h": 1698
+  },
+  "projects/lampara-cintas/planos/plano_N5_varilla": {
+    "w": 2400,
+    "h": 1698
+  },
+  "projects/lampara-cintas/planos/plano_N6_aro_perforado_sup": {
+    "w": 2400,
+    "h": 1698
+  },
+  "projects/lampara-cintas/planos/plano_N7_aro_superior": {
+    "w": 2400,
+    "h": 1698
+  },
+  "projects/lampara-cintas/planos/plano_N8_piezas_fijacion": {
+    "w": 2400,
+    "h": 1698
+  },
+  "projects/lampara-cintas/planos/plano_N9_pieza_fijacion_A": {
+    "w": 2400,
+    "h": 1698
   },
   "projects/lampara-cintas/render": {
     "w": 519,

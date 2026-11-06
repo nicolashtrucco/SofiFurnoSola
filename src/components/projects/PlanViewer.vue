@@ -9,7 +9,7 @@ import ArchiveImage from '@/components/ui/ArchiveImage.vue'
 import { media } from '@/lib/media'
 import type { Sheet } from '@/data/projects'
 
-const props = defineProps<{ sheets: Sheet[]; total: number }>()
+const props = defineProps<{ sheets: Sheet[] }>()
 const current = ref(0)
 const open = ref(false)
 const zoom = ref(false)
@@ -78,16 +78,16 @@ onBeforeUnmount(() => {
 
     <!-- Índice de láminas -->
     <div class="col-span-12 lg:col-span-3">
-      <p class="t-meta muted mb-4">{{ sheets.length }} de {{ total }} láminas publicadas</p>
-      <ol class="flex gap-3 overflow-x-auto pb-2 lg:flex-col lg:overflow-visible">
+      <p class="t-meta muted mb-4">{{ sheets.length }} láminas</p>
+      <ol class="flex gap-3 overflow-x-auto pb-2 lg:grid lg:grid-cols-2 lg:gap-x-3 lg:gap-y-5 lg:overflow-visible lg:pb-0">
         <li v-for="(s, i) in sheets" :key="s.n" class="w-[46vw] shrink-0 sm:w-[30vw] lg:w-auto">
           <button
-            class="relative grid w-full grid-cols-1 gap-2 text-left lg:grid-cols-[7.5rem_1fr] lg:items-center lg:gap-4"
+            class="relative grid w-full grid-cols-1 content-start gap-2 text-left"
             :aria-pressed="i === current"
             @click="current = i"
           >
             <span class="relative block bg-white p-1">
-              <ArchiveImage :id="s.img.id" :alt="''" sizes="(min-width: 1024px) 8rem, 46vw" />
+              <ArchiveImage :id="s.img.id" :alt="''" sizes="(min-width: 1024px) 10rem, 46vw" />
               <motion.span
                 class="pointer-events-none absolute inset-0 border border-charcoal"
                 :initial="false"
@@ -95,7 +95,7 @@ onBeforeUnmount(() => {
                 :transition="{ duration: 0.3 }"
               />
             </span>
-            <span class="t-meta" :class="i === current ? '' : 'muted'">{{ s.n }}<br />{{ s.title }}</span>
+            <span class="t-meta !text-[0.58rem] leading-snug" :class="i === current ? '' : 'muted'">{{ s.n }}<br />{{ s.title }}</span>
           </button>
         </li>
       </ol>

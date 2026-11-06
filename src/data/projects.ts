@@ -103,12 +103,18 @@ export const cintas = {
     { k: 'Altura total', v: '197 mm', src: 'Plano N1' },
     { k: 'Aro perforado', v: 'Ø 125 mm', src: 'Plano N4' },
   ],
-  totalSheets: 10,
-  /** Planos publicados. Agregar los restantes (N3, N5…) en orden. */
+  /** Los 10 planos del proyecto, en orden. */
   sheets: [
-    { n: 'N1', title: 'Ensamblaje lámpara', scale: '1:2', img: { id: 'projects/lampara-cintas/planos/plano_N1_ensamblaje', alt: 'Plano N1 — ensamblaje de la lámpara, vistas y perspectiva' } },
-    { n: 'N2', title: 'Explosionada lámpara', scale: '1:2', img: { id: 'projects/lampara-cintas/planos/plano_N2_explosionada', alt: 'Plano N2 — vista explosionada con lista de piezas' } },
-    { n: 'N4', title: 'Aro perforado inferior', scale: '1:1', img: { id: 'projects/lampara-cintas/planos/plano_N4_aro_perforado_inf', alt: 'Plano N4 — aro perforado inferior, corte A-A y cotas' } },
+    { n: 'N1', title: 'Ensamblaje lámpara', scale: '1:2', img: { id: 'projects/lampara-cintas/planos/plano_N1_ensamblaje', alt: 'Plano N1 — el ensamblaje con vistas y perspectiva' } },
+    { n: 'N2', title: 'Explosionada lámpara', scale: '1:2', img: { id: 'projects/lampara-cintas/planos/plano_N2_explosionada', alt: 'Plano N2 — la vista explosionada con lista de piezas' } },
+    { n: 'N3', title: 'Base', scale: '1:1', img: { id: 'projects/lampara-cintas/planos/plano_N3_base', alt: 'Plano N3 — la base' } },
+    { n: 'N4', title: 'Aro perforado inferior', scale: '1:1', img: { id: 'projects/lampara-cintas/planos/plano_N4_aro_perforado_inf', alt: 'Plano N4 — el aro perforado inferior, con corte A-A y cotas' } },
+    { n: 'N5', title: 'Varilla', scale: '1:1', img: { id: 'projects/lampara-cintas/planos/plano_N5_varilla', alt: 'Plano N5 — la varilla' } },
+    { n: 'N6', title: 'Aro perforado superior', scale: '1:1', img: { id: 'projects/lampara-cintas/planos/plano_N6_aro_perforado_sup', alt: 'Plano N6 — el aro perforado superior' } },
+    { n: 'N7', title: 'Aro superior', scale: '1:1', img: { id: 'projects/lampara-cintas/planos/plano_N7_aro_superior', alt: 'Plano N7 — el aro superior' } },
+    { n: 'N8', title: 'Piezas de fijación', scale: '1:2', img: { id: 'projects/lampara-cintas/planos/plano_N8_piezas_fijacion', alt: 'Plano N8 — las piezas de fijación' } },
+    { n: 'N9', title: 'Pieza de fijación A', scale: '10:1', img: { id: 'projects/lampara-cintas/planos/plano_N9_pieza_fijacion_A', alt: 'Plano N9 — la pieza de fijación A' } },
+    { n: 'N10', title: 'Pieza de fijación B', scale: '10:1', img: { id: 'projects/lampara-cintas/planos/plano_N10_pieza_fijacion_B', alt: 'Plano N10 — la pieza de fijación B' } },
   ] as Sheet[],
 } satisfies ProjectBase & Record<string, unknown>
 

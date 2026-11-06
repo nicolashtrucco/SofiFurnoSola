@@ -17,7 +17,7 @@ const top = () => gsap.to(window, { scrollTo: 0, duration: prefersReducedMotion(
 useGsapContext(() => {
   markDarkSurface(root.value, 'contact')
   trackSection(root.value, 'contacto')
-  drawOnScroll(lines.value, root.value!, 'top 70%', 'center 55%')
+  drawOnScroll(lines.value, root.value!, 'top 85%', 'top 25%')
 }, root)
 </script>
 

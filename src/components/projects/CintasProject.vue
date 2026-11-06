@@ -78,7 +78,7 @@ useGsapContext(() => {
         <h4 class="t-meta col-span-12 flex gap-3 md:col-span-3"><span class="text-wood-deep">2.3</span>Documentación técnica</h4>
         <p class="t-lead col-span-12 max-w-[28ch] md:col-span-9 lg:col-span-7">Diez planos bajo normas IRAM, del ensamblaje a cada pieza.</p>
       </div>
-      <PlanViewer :sheets="p.sheets" :total="p.totalSheets" />
+      <PlanViewer :sheets="p.sheets" />
     </section>
   </article>
 </template>

@@ -57,7 +57,7 @@ export function drawOnScroll(paths: Element[], trigger: Element, start = 'top 75
   gsap.fromTo(
     paths,
     { strokeDashoffset: 1 },
-    { strokeDashoffset: 0, ease: 'none', stagger: 0.08, scrollTrigger: { trigger, start, end, scrub: 0.8 } },
+    { strokeDashoffset: 0, ease: 'none', stagger: 0.12, scrollTrigger: { trigger, start, end, scrub: 1 } },
   )
 }
 

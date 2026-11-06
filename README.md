@@ -21,7 +21,7 @@ npm run optimize:model    # regenera los GLB livianos desde src/assets/models/th
 2. `npm run optimize:images`.
 3. Referenciarla en `projects.ts` por su ruta sin extensión, p. ej. `projects/lampara-cintas/planos/plano_N3_…`.
 
-- Planos de la lámpara de cintas: agregar las láminas faltantes al array `sheets` (el visor muestra "N de 10").
+- Planos de la lámpara de cintas: las 10 láminas (N1–N10) ya están en `sheets`; para sumar o reordenar se edita ese array.
 - Optimización topológica de la reposera: agregar imágenes a `topology.images` y aparecen solas. Los valores de 89 kg / 30 kg / 12 % no se publican hasta verificar su contexto.
 
 ## Composición
